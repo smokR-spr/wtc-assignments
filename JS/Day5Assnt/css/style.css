@@ -4,10 +4,12 @@
 
 /* common styling */
 * {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 :focus {
     outline: none;
+    /* to remmove the default outlining 
+    of the browser on focusing an element */
 }
 
 /* non-specific styling */
@@ -34,10 +36,25 @@
 div.popup {
     display: inline-block;
     border-radius: 10px 0px;
-    padding: 30px;
+    padding: 25px;
     /*font-weight: 500;*/
+    background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    background: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
     box-shadow: 0px 1px 5px #CFD0D0;
     border: 1px solid black;
+
+    width: 350px;
+    /*height: 179px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -89.5px;*/
+
+    -webkit-transition: display 1s height 1s margin 1s ease;
+    -moz-transition: display 1s height 1s margin 1s ease;
+    transition: display 1s height 1s margin 1s ease;
 }
 div.popup tr td:first-child {
     /* width for labels */
@@ -51,6 +68,7 @@ div.popup input, div.popup select {
     box-sizing: border-box;
 }
 div.popup button {
+    font-size: 12px;
     padding: 12px 20px;
     width: 85px;
     border: none;
@@ -64,13 +82,56 @@ div.popup button {
 #buttons {
     /* for popup buttons */
     text-align: right;
-    position: relative;
-    top: 16px;
+    /*position: relative;
+    top: 13px;*/
+    padding-top: 13px;
 }
+
+/* Errors styling */
+div.popup div#err, div.popup div#err p, div.popup div#err ol, div.popup div#err ol li {
+    margin: 0;
+    font-size: 13px;
+}
+div.popup div#err {
+    color: red;
+    background: #FFFFC9;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    border: 1px solid #BD494A;
+    padding: 2px 5px 10px;
+    margin-bottom: 23px;
+    /*display: none;*/
+}
+div.popup div#err ol {
+    padding-left: 0;
+    list-style-position: inside;
+}
+div.err {
+    height: 261px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -130.5px;
+}
+div.err div#err {
+    display: block;
+}
+div.noerr {
+    height: 179px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -89.5px;
+}
+div.noerr div#err {
+    display: none;
+}
+
 
 /*------------ student info table styling ------------*/
 .content table {
-    text-align: left;
+    text-align: left !important;
     border-collapse: collapse;
     background: white;
 }
@@ -79,18 +140,21 @@ div.popup button {
 }
 .content td, .content th {
     padding: 5px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 .content thead {
     color: white;
 }
 .content th {
-    background: black; /* temporary color to be replaced 
+    background: #CCCCB0; /* temporary color to be replaced 
     later by applying corresponding classes */
     border-top: 2px solid;
     border-bottom: 2px solid;
-    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2), ;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), ;
     margin-top: 2px;
+
+    text-align: left !important; /* IE doesn't inherit 
+    this from the table properties */
 }
 
 /* column width specification */
@@ -117,17 +181,20 @@ div.popup button {
 }
 .content th#header div {
     line-height: 36px;
-    display: block; 
-    /*background: #37B3DE linear-gradient(transparent, rgba(0, 0, 0, 0.4));*/
+    display: block;
+    background: #CCCCCC -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #CCCCCC -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #CCCCCC linear-gradient(transparent, rgba(0, 0, 0, 0.3));
     padding-left: 5px;
     padding-right: 5px;
     position: relative;
     /* relative positioning is needed 
     to display the shadow of this div */
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .content th#header a {
     float: right;
+    font-weight: normal;
     color: #022967;
 }
 .content th#header a:before {
@@ -146,8 +213,8 @@ div.popup button {
 .content table {
     counter-reset: s-num;
     /* 
-     * counter variable: s-num
-     * counter value after reset: 0
+     * s-num is counter variable
+     * counter value after reset is 0
      */
 }
 .content table td:first-child:before {
@@ -174,10 +241,62 @@ div.popup button {
     background-size: 20px 20px !important;
 }
 
-/* alternate coloring of rows */
+/* default alternate coloring of rows */
 tbody tr:nth-child(odd) {
     background: #CCCCCC;
 }
 tbody tr:nth-child(even) {
     background: #F4F4F4;
+}
+
+/*-------------color themes---------------*/
+
+/*****orange theme*****/
+/* table colors */
+.orange th {
+    background: #FE9748 !important;
+}
+.orange th#header div {
+    background: #FF9129 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3)) !important;
+    background: #FF9129 -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3)) !important;
+    background: #FF9129 linear-gradient(transparent, rgba(0, 0, 0, 0.3)) !important;
+}
+.orange tbody tr:nth-child(odd) {
+    background: #FEDFD2 !important;
+}
+.orange tbody tr:nth-child(even) {
+    background: #FFF1F0 !important;
+}
+
+/* popup colors */
+.orange.popup {
+    border: 1.5px solid #F9B270 !important;
+    background: -webkit-linear-gradient(#FEEBDA, #FFBE86) !important;
+    background: -moz-linear-gradient(#FEEBDA, #FFBE86) !important;
+    background: linear-gradient(#FEEBDA, #FFBE86) !important;
+}
+
+/*****blue theme*****/
+/* table colors */
+.blue th {
+    background: #4DAECB !important;
+}
+.blue th#header div {
+    background: #36B2D9 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3)) !important;
+    background: #36B2D9 -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3)) !important;
+    background: #36B2D9 linear-gradient(transparent, rgba(0, 0, 0, 0.3)) !important;
+}
+.blue tbody tr:nth-child(odd) {
+    background: #D6E5F1 !important;
+}
+.blue tbody tr:nth-child(even) {
+    background: #EFF3FA !important;
+}
+
+/* popup colors */
+.blue.popup {
+    border: 1.5px solid #9CD8E7 !important;
+    background: -webkit-linear-gradient(#E2F8FF, #9CE9FF) !important;
+    background: -moz-linear-gradient(#E2F8FF, #9CE9FF) !important;
+    background: linear-gradient(#E2F8FF, #9CE9FF) !important;
 }

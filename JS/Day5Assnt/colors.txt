@@ -67,10 +67,14 @@ tb-border:
 
 popup error colors
 border:
-##E1AE91
+#BD494A
 bg: 
 #FFFFC9
 text:
-#FF7638
+red
 
 
+with err:
+350px 261px
+without err:
+350px 179px
