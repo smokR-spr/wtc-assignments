@@ -1,0 +1,115 @@
+/* common properties of various elements */
+
+html,body,table,p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Helvetica', 'Arial', serif;
+}
+table {
+    text-align: left;
+    border-collapse: collapse;
+    background: white;
+}
+table,th,td {
+    border: 1px solid white;
+}
+td,th {
+    padding: 5px;
+    font-weight: bold;
+}
+thead {
+    color: white;
+}
+th {
+    background: #4DAECC;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2), ;
+    margin-top: 2px;
+}
+tbody tr:nth-child(odd) {
+    background: #D6E6F2;
+}
+tbody tr:nth-child(even) {
+    background: #F1F4FA;
+}
+
+/* column width specification */
+/* Name column */
+colgroup col:nth-child(2) {
+    width: 150px;
+}
+
+/* Qualification column */
+colgroup col:nth-child(4) {
+    width: 120px;
+}
+
+/* Action column */
+colgroup col:nth-child(6) {
+    width: 100px;
+}
+
+/* table header styling */
+th#t-head {
+    padding: 0;
+    /* resetting the padding set for this particular th */
+}
+th#t-head div {
+    line-height: 36px;
+    display: block;
+    background: #37B3DE linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    /* needed to display the shadow of this div */
+    
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+}
+th#t-head a {
+    float: right;
+    color: #022967;
+}
+th#t-head a:before {
+    /* add */
+    
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: transparent url("../images/add-person.png") !important;
+    background-size: 20px 20px !important;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+/* auto numbering in S. No. column */
+table {
+    counter-reset: s-num;
+}
+table td:first-child:before {
+    counter-increment: s-num;
+    content: counter(s-num);
+}
+
+/* images for edit and delete */
+td.action a {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+td.action a:nth-child(1) {
+    /* edit */
+    
+    background: transparent url("../images/user-edit-icon.png") !important;
+    background-size: 20px 20px !important;
+}
+td.action a:nth-child(2) {
+    /* delete */
+    
+    background: transparent url("../images/delete2.png") !important;
+    background-size: 20px 20px !important;
+}

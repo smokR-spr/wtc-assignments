@@ -1,0 +1,76 @@
+**** Assignment 1 ****
+
+table colors
+top-div-bg-gradient-start: 
+#FF9129
+head-bg: 
+#FE9748
+row-odd-bg: 
+#FEDFD2
+row-even-bg:
+#FFF1F0
+
+popup colors
+border-outer:
+#F9B270
+border-shadow-outer:
+#CFD0D0
+bg-gradient: top, bottom
+#FEEBDA, #FFBE86
+dropdown-arrow-gradient:
+#34B1D2
+reset-bt-bg-gradient:
+#CB3939
+submit-bt-bg-gradient:
+#9AC745
+tb-border:
+#4AAEC6
+
+
+popup error colors
+border:
+##E1AE91
+bg: 
+#FFFFC9
+text:
+#FF7638
+
+
+**** Assignment 2 ****
+
+table colors
+top-div-bg-gradient-start: 
+#36B2D9
+head-bg: 
+#4DAECB
+row-odd-bg: 
+#D6E5F1
+row-even-bg:
+#EFF3FA
+
+popup colors
+border-outer:
+#9CD8E7
+border-shadow-outer:
+#B9BBBD
+bg-gradient: top, bottom
+#E2F8FF, #9CE9FF
+dropdown-arrow-gradient:
+#34B1D2
+reset-bt-bg-gradient:
+#CB3939
+submit-bt-bg-gradient:
+#9AC745
+tb-border:
+#4AAEC6
+
+
+popup error colors
+border:
+##E1AE91
+bg: 
+#FFFFC9
+text:
+#FF7638
+
+

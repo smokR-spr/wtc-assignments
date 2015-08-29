@@ -1,0 +1,183 @@
+/**
+ * styling for Walking Tree - LMS assignment in JS module 
+ */
+
+/* common styling */
+* {
+    font-family: 'Verdana', sans-serif;
+}
+:focus {
+    outline: none;
+}
+
+/* non-specific styling */
+.required:after {
+    content: '*';
+    color: red;
+}
+.b-green {
+    /* for submit button */
+    background: #9AC745 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #9AC745 -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #9AC745 linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.b-red {
+    /* for reset  button */
+    background: #CB3939 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #CB3939 -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #CB3939 linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+
+/*--------------- popup styling ----------------------*/
+/* general properties */
+div.popup {
+    display: inline-block;
+    border-radius: 10px 0px;
+    padding: 30px;
+    /*font-weight: 500;*/
+    box-shadow: 0px 1px 5px #CFD0D0;
+    border: 1px solid black;
+}
+div.popup tr td:first-child {
+    /* width for labels */
+    width: 120px;
+}
+div.popup input, div.popup select {
+    background: white;
+    width: 220px;
+    border: 2px solid #4AAEC6 /*#2D97B3*/;
+    padding: 7px;
+    box-sizing: border-box;
+}
+div.popup button {
+    padding: 12px 20px;
+    width: 85px;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0 0 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+#buttons {
+    /* for popup buttons */
+    text-align: right;
+    position: relative;
+    top: 16px;
+}
+
+/*------------ student info table styling ------------*/
+.content table {
+    text-align: left;
+    border-collapse: collapse;
+    background: white;
+}
+.content table, .content th, .content td {
+    border: 1px solid white;
+}
+.content td, .content th {
+    padding: 5px;
+    font-weight: bold;
+}
+.content thead {
+    color: white;
+}
+.content th {
+    background: black; /* temporary color to be replaced 
+    later by applying corresponding classes */
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2), ;
+    margin-top: 2px;
+}
+
+/* column width specification */
+/* Name column */
+.content colgroup col:nth-child(2) {
+    width: 150px;
+}
+/* Qualification column */
+.content colgroup col:nth-child(4) {
+    width: 120px;
+}
+/* Action column */
+.content colgroup col:nth-child(6) {
+    width: 100px;
+}
+
+/* header styling */
+.content th#header {
+    padding: 0;
+    /* resetting the padding set for this particular th */
+}
+.content th#header p {
+    margin: 0;
+}
+.content th#header div {
+    line-height: 36px;
+    display: block; 
+    /*background: #37B3DE linear-gradient(transparent, rgba(0, 0, 0, 0.4));*/
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    /* relative positioning is needed 
+    to display the shadow of this div */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
+}
+.content th#header a {
+    float: right;
+    color: #022967;
+}
+.content th#header a:before {
+    /* add */
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: transparent url("../images/add-person.png") !important;
+    background-size: 20px 20px !important;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+/* auto numbering in S. No. column */
+.content table {
+    counter-reset: s-num;
+    /* 
+     * counter variable: s-num
+     * counter value after reset: 0
+     */
+}
+.content table td:first-child:before {
+    counter-increment: s-num;
+    content: counter(s-num);
+}
+
+/* images for edit and delete */
+.content td.action a {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.content td.action a:nth-child(1) {
+    /* edit */
+    background: transparent url("../images/user-edit-icon.png") !important;
+    background-size: 20px 20px !important;
+}
+.content td.action a:nth-child(2) {
+    /* delete */
+    background: transparent url("../images/delete2.png") !important;
+    background-size: 20px 20px !important;
+}
+
+/* alternate coloring of rows */
+tbody tr:nth-child(odd) {
+    background: #CCCCCC;
+}
+tbody tr:nth-child(even) {
+    background: #F4F4F4;
+}

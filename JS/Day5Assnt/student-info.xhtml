@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Assignment 1 | JS Module | WTC</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+    <div class="content">
+
+        <!-- 
+            student info table
+        -->
+        <table class="orange">
+            <colgroup>
+                <!-- the width of each column is formatted using CSS -->
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th id="header" colspan="6">
+                        <div>
+                            <p>Student List <a href="#">Add</a>
+                            </p>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>S. No.</th>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Qualification</th>
+                    <th>Created On</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <!-- intentionally left blank for auto serial number generation using CSS -->
+                    <td>Student 1</td>
+                    <td>ab@w.in</td>
+                    <td>B.Tech.</td>
+                    <td>24 Aug 2015</td>
+                    <td class="action">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Student 2</td>
+                    <td>cd@w.in</td>
+                    <td>MCA</td>
+                    <td>1 Aug 2015</td>
+                    <td class="action">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> <!-- wrapper ends -->
+
+    <!-- 
+            popup 
+        -->
+        <div class="orange popup">
+            <!-- to close the popup -->
+            <a href="javascript:void(0)" class="closeme"></a>
+
+            <!-- add student form -->
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name"><span  class="required">Name</span><!--<span class="required">*</span>-->:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email"><span  class="required">E-mail</span><!--<span class="required">*</span>-->:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="email" id="email"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Qualification:</td>
+                        <td>
+
+                            <select>
+                                <option value="" selected="selected">-- Choose Qualification --</option>
+                                <option value="B.Tech.">B.Tech.</option>
+                                <option value="BE">BE</option>
+                                <option value="BE">MCA</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="buttons">
+                            <button class="b-green">Submit</button>
+                            <button class="b-red">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div> <!-- popup ends -->
+</body>
+
+</html>

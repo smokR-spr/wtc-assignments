@@ -1,0 +1,65 @@
+/* resetting the html */
+* {
+
+}
+html, body, p, header, footer, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: #ebfbfa; /* #dcdccf;*/
+	font-family: "Trebuchet MS", Helvetica, sans-serif; /*'Georgia', serif;*/
+	font-size: 100%;
+}
+
+header {
+	/*outline: 1px dashed red;*/
+
+	width: 100%;
+	height: 90px;
+	background: #008080;
+
+	text-align: right;
+	vertical-align: middle;
+}
+
+header p {
+	/*outline: 1px dashed red;*/
+
+	display: inline;
+
+	font-family: "Georgia", serif;
+	font-size: 2em;
+	color: white;
+
+	position: relative;
+	top: 50%;
+
+	border-bottom: 1px solid white;
+}
+
+header p:before {
+	content: "";
+	display: inline-block;
+	width: 55px;
+	height: 15px;
+
+	/*outline: 1px dashed red;*/
+}
+
+.container {
+	/*outline: 1px dashed red;*/
+
+	width: 100%;
+	max-width: 983px;
+	height: 100%;
+
+	margin: 0 auto;
+	padding: 10px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

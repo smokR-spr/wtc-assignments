@@ -1,0 +1,67 @@
+/* common properties */
+html, body, table, th, td, select {
+    margin: 0;
+    padding: 0;    
+    font-family: 'Helvetica', 'Arial', serif;
+}
+table, th, td {
+    border-spacing: 5px;
+}
+
+
+/* specific properties */
+div#popup {
+    display: inline-block;
+    background: -webkit-linear-gradient(#E3F8FF, #A1E7FF);
+    background: -moz-linear-gradient(#E3F8FF, #A1E7FF);
+    background: linear-gradient(#E3F8FF, #A1E7FF);
+    border: 1.5px solid rgba(45, 151, 179, 0.5);    
+    border-radius: 10px 0px;
+    padding: 30px;
+    font-weight: 600;
+    box-shadow: 0px 1px 2px gray;
+    margin: 10px;
+}
+div#popup label span {
+    color: red;
+}
+div#popup tr td:first-child {
+    width: 120px;
+}
+div#popup input, select {
+    background: white;
+    width: 220px;
+    border: 2px solid #2D97B3;
+    padding: 7px;
+    box-sizing: border-box;
+}
+div#popup select {
+    background: white url("../images/arrow-down1.png") no-repeat right top/32px 32px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.right {
+    text-align: right;
+}
+div#popup button {
+    padding: 12px 20px;
+    width: 85px;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0 0 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.b-green {
+    background: #9AC646 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #9AC646 -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #9AC646 linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+.b-red {
+    background: #CD3A34 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #CD3A34 -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    background: #CD3A34 linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}

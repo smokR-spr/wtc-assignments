@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Assignment 2</title>
+        <style>
+            /* table styling */
+            table#personInfo {
+                width: 700px;
+                border-color: white;
+                /*border: 2px solid white;*/
+                margin: 0;
+                padding: 0;
+                border-collapse: collapse;
+                font-family:'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+            }
+            table#personInfo th, thead {
+                border: 2px solid white;
+            }
+            table#personInfo th, tr, td, tbody {
+                border: 1px solid white;
+            }
+            table#personInfo th, td {
+                padding: 5px 8px;
+            }
+            table#personInfo th {
+                text-align: left;
+                margin: 0;
+                background: #4DAECC;
+                color: white;
+            }
+            table#personInfo tr:nth-child(odd) {
+                background: #D6E6F0;
+            }
+            table#personInfo tr:nth-child(even) {
+                background: #F0F4FB;
+            }
+            /* table images styling */
+            .img-button {
+                height: 18px;
+                vertical-align: middle;
+                margin: 0;
+                padding: 0 2px;
+            }
+            /* header styling in the table */
+            div#header {
+                display: inline-block;
+                position: relative;
+                background: -webkit-linear-gradient(#36B4DA, #298CA9);
+                background: -moz-linear-gradient(#36B4DA, #298CA9);
+                background: linear-gradient(#36B4DA, #298CA9);
+                box-shadow: 0px 1px 5px gray;
+                width: 100%;
+                line-height: 36px;
+                margin: 0;
+            }
+            div#header p {
+                margin: 0;
+                padding: 0px 8px;
+            }
+            div#header p span {
+                float: right;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <table id="personInfo">
+            <thead>
+                <tr>
+                    <th colspan="6" style="padding: 0px;border:2px solid white;">
+                        <!-- header -->
+                        <div id="header">
+                            <p>Student List <span>
+                            <a href="#">
+                                <img class="img-button" src="images/add-person.png" alt="add person"/>Add
+                            </a>
+                        </span>
+
+                            </p>
+                        </div>
+                        <!-- header close -->
+                    </th>
+                </tr>
+                <tr>
+                    <th>S. No.</th>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Qualification</th>
+                    <th>Created On</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Student1</td>
+                    <td>ab@xy.in</td>
+                    <td>MCA</td>
+                    <td>6 Jan 2015</td>
+                    <td> <a href="#"><img class="img-button" src="images/user-edit-icon.png" alt="Edit"/></a>
+ <a href="#"><img class="img-button" src="images/delete.png" alt="Delete"/></a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Student2</td>
+                    <td>cd@xy.in</td>
+                    <td>BE</td>
+                    <td>5 Jan 2015</td>
+                    <td> <a href="#"><img class="img-button" src="images/user-edit-icon.png" alt="Edit"/></a>
+ <a href="#"><img class="img-button" src="images/delete.png" alt="Delete"/></a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Student3</td>
+                    <td>ef@xy.in</td>
+                    <td>B.Tech.</td>
+                    <td>2 Jan 2015</td>
+                    <td> <a href="#"><img class="img-button" src="images/user-edit-icon.png" alt="Edit"/></a>
+ <a href="#"><img class="img-button" src="images/delete.png" alt="Delete"/></a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Student4</td>
+                    <td>gh@xy.in</td>
+                    <td>MCA</td>
+                    <td>23 Dec 2014</td>
+                    <td> <a href="#"><img class="img-button" src="images/user-edit-icon.png" alt="Edit"/></a>
+ <a href="#"><img class="img-button" src="images/delete.png" alt="Delete"/></a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Assignment 3</title>
+        <style>
+            .red {
+                color: red;
+            }
+            div#popup {
+                display: inline-block;
+                padding: 25px;
+                background: -webkit-linear-gradient(#E3F8FF, #A1E7FF);
+                background: -moz-linear-gradient(#E3F8FF, #A1E7FF);
+                background: linear-gradient(#E3F8FF, #A1E7FF);
+                border: 1px solid #A1E7FF;
+                box-shadow: 1px 1px 3px gray;
+                border-radius: 10px 0;
+                font-family:'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+            }
+            div#popup input, select {
+                padding: 7px;
+                margin: 1px 0 1px 20px;
+                border: 2px solid #2D97B3;
+                width: 200px;
+            }
+            div#popup select {
+                background:#FFFFFF;
+                width: 218px;
+                background: url("images/arrow-down1.png") no-repeat white right;
+                background-size: 31px 31px;
+                /* to make the arrow invisible */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+            div#popup button {
+                padding: 12px 20px;
+                width: 85px;
+                border: none;
+                color: white;
+                border-radius: 7px;
+                text-align: center;
+                cursor: pointer;
+                margin: 10px 0 0 5px;
+                box-shadow: 1px 1px 3px gray;
+            }
+            .b-red {
+                background:-webkit-linear-gradient(#CE3D39, #A12C2A);
+                background:-moz-linear-gradient(#CE3D39, #A12C2A);
+                background:linear-gradient(#CE3D39, #A12C2A);
+            }
+            .b-green {
+                background:-webkit-linear-gradient(#9BC646, #789836);
+                background:-moz-linear-gradient(#9BC646, #789836);
+                background:linear-gradient(#9BC646, #789836);
+            }
+            .right {
+                text-align: right;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="popup">
+            <form action="" method="get">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">Name<span class="red">*</span>:</td>
+                        </label>
+                        <td>
+                            <input type="text" name="person-name" id="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mail">E-mail<span class="red">*</span>:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="e-mail" id="mail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Qualification:
+                        </td>
+                        <td>
+                            <select id="quali">
+                                <option value=""></option>
+                                <option value="B.Tech.">B.Tech.</option>
+                                <option value="BE">BE</option>
+                                <option value="BE">MCA</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="right">
+                            <button class="b-green">Submit</button>
+                            <button class="b-red">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+
+</html>
