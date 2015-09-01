@@ -28,7 +28,7 @@
                 <tr>
                     <th id="header" colspan="6">
                         <div>
-                            <p>Student List <a href="#">Add</a>
+                            <p>Student List <a id="add" href="javascript:void(0)">Add</a>
                             </p>
                         </div>
                     </th>
@@ -89,7 +89,7 @@
         </div>
 
         <!-- add student form -->
-        <form action="">
+        <form action="" name="addStudent" id="addStudent">
             <table>
                 <tr>
                     <td>
@@ -99,6 +99,20 @@
                     <td>
                         <input type="text" name="Name" id="Name" />
                     </td>
+                    <td>
+                        <a href="javascript:void(0);" class="tooltip">
+                            <p>?</p>
+                            <span>
+                                Name should have:
+                                <ul>
+                                    <li>two words separated by space</li>
+                                    <li>only letters</li>
+                                    <li>first letter of each word must be in uppercase</li>
+                                    <li>not more than 20 characters</li>
+                                </ul>
+                            </span>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -107,6 +121,17 @@
                     </td>
                     <td>
                         <input type="text" name="E-mail" id="E-mail" />
+                    </td>
+                    <td>
+                        <a href="javascript:void(0);" class="tooltip">
+                            <p>?</p>
+                            <span>
+                                Email should be in the following format:
+                                <ul>
+                                    <li>xy@zabc.com</li>
+                                </ul>
+                            </span>
+                        </a>
                     </td>
                 </tr>
                 <tr>
@@ -120,11 +145,19 @@
                             <option value="BE">MCA</option>
                         </select>
                     </td>
+                    <td>
+                        <a href="javascript:void(0);" class="tooltip">
+                            <p>?</p>
+                            <span>
+                                Choose any one option given in the list.
+                            </span>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                    <td colspan="2" id="buttons">
-                        <button class="b-green">Submit</button>
-                        <button class="b-red">Reset</button>
+                    <td colspan="3" id="buttons">
+                        <button id="submit" class="b-green" type="submit">Submit</button>
+                        <button id="reset" class="b-red">Reset</button>
                     </td>
                 </tr>
             </table>
@@ -133,6 +166,7 @@
     <!-- popup ends -->
 
     <!-- scripts -->
+    <script type="text/javascript" src="js/date.format.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

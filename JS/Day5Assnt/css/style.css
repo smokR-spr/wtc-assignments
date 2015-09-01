@@ -44,6 +44,8 @@ div.popup {
     box-shadow: 0px 1px 5px #CFD0D0;
     border: 1px solid black;
 
+    /*display: none;*/
+
     width: 350px;
     /*height: 179px;
     position: absolute;
@@ -52,10 +54,34 @@ div.popup {
     margin-left: -175px;
     margin-top: -89.5px;*/
 
-    -webkit-transition: display 1s height 1s margin 1s ease;
-    -moz-transition: display 1s height 1s margin 1s ease;
-    transition: display 1s height 1s margin 1s ease;
+    -webkit-transition: display 2s height 1s margin 1s ease;
+    -moz-transition: display 2s height 1s margin 1s ease;
+    transition: display 2s height 1s margin 1s ease;
 }
+div.popup .closeme {
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/delete2.png') no-repeat;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+/*div.popup:after {
+    content: '';
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../images/delete2.png') no-repeat;
+    background-size: 20px 20px;
+    cursor: pointer;
+} /* not possible to add event listener to a pseudo element as 
+it doesn't exist in DOM */
 div.popup tr td:first-child {
     /* width for labels */
     width: 120px;
@@ -67,6 +93,9 @@ div.popup input, div.popup select {
     padding: 7px;
     box-sizing: border-box;
 }
+/*div.popup select option {
+    padding: 7px;
+}*/
 div.popup button {
     font-size: 12px;
     padding: 12px 20px;
@@ -111,7 +140,7 @@ div.err {
     left: 50%;
     top: 50%;
     margin-left: -175px;
-    margin-top: -130.5px;
+    margin-top: -120.5px;
 }
 div.err div#err {
     display: block;
@@ -299,4 +328,44 @@ tbody tr:nth-child(even) {
     background: -webkit-linear-gradient(#E2F8FF, #9CE9FF) !important;
     background: -moz-linear-gradient(#E2F8FF, #9CE9FF) !important;
     background: linear-gradient(#E2F8FF, #9CE9FF) !important;
+}
+
+/*-----------tooltip-------------*/
+a.tooltip {
+    outline:none;
+    display: none;
+    text-decoration: none;
+    color: black;
+    height: 20px;
+    width: 20px;
+    background: url('../images/help1.png') no-repeat;
+    background-size: 20px 20px;
+}
+a.tooltip p {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a.tooltip ul {
+    margin: 0;
+}
+a.tooltip:hover {
+    text-decoration:none;
+}
+a.tooltip span {
+    z-index:10;
+    display:none;
+    padding:14px 20px;
+    margin-top:-30px;
+    margin-left:28px;
+    width:300px;
+    line-height:16px;
+}
+a.tooltip:hover span {
+    display:inline;
+    position:absolute;
+    color:#111;
+    border:1px solid #DCA;
+    background:#fffAF0;
 }
