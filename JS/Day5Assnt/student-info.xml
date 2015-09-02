@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<studentInfo>
+	<student id="1">
+		<name>Bunty</name>
+		<email>bunty@bubli.in</email>
+		<qualification>B.Tech</qualification>
+		<createdOn>24 Aug 2015</createdOn>
+	</student>
+    <student id="1">
+        <name>Bonny</name>
+        <email>bonny@clide.in</email>
+        <qualification>MCA</qualification>
+        <createdOn>29 Aug 2015</createdOn>
+    </student>
+</studentInfo>
