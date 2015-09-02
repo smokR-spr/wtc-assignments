@@ -6,6 +6,9 @@
 * {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
+a {
+    margin: 0;
+}
 :focus {
     outline: none;
     /* to remmove the default outlining 
@@ -44,7 +47,7 @@ div.popup {
     box-shadow: 0px 1px 5px #CFD0D0;
     border: 1px solid black;
 
-    /*display: none;*/
+    display: none;
 
     width: 350px;
     /*height: 179px;
@@ -252,10 +255,12 @@ div.noerr div#err {
 }
 
 /* images for edit and delete */
+
 .content td.action a {
     display: inline-block;
     height: 20px;
     width: 20px;
+    margin:0; 
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -353,7 +358,7 @@ a.tooltip ul {
 a.tooltip:hover {
     text-decoration:none;
 }
-a.tooltip span {
+a.tooltip label {
     z-index:10;
     display:none;
     padding:14px 20px;
@@ -362,10 +367,12 @@ a.tooltip span {
     width:300px;
     line-height:16px;
 }
-a.tooltip:hover span {
+a.tooltip:hover label {
     display:inline;
     position:absolute;
     color:#111;
     border:1px solid #DCA;
     background:#fffAF0;
+    border-radius: 5px;
+    box-shadow: 4px 4px 7px gray;
 }

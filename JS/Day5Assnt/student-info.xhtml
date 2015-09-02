@@ -14,7 +14,7 @@
         <!-- 
             student info table
         -->
-        <table class="blue">
+        <table id="studentInfo" class="blue">
             <colgroup>
                 <!-- the width of each column is formatted using CSS -->
                 <col/>
@@ -51,8 +51,8 @@
                     <td>B.Tech.</td>
                     <td>24 Aug 2015</td>
                     <td class="action">
-                        <a href="#"></a>
-                        <a href="#"></a>
+                        <a class="edit" href="javascript:void(0);"></a>
+                        <a class="delete" href="javascript:void(0);"></a>
                     </td>
                 </tr>
                 <tr>
@@ -62,8 +62,8 @@
                     <td>MCA</td>
                     <td>1 Aug 2015</td>
                     <td class="action">
-                        <a href="#"></a>
-                        <a href="#"></a>
+                        <a class="edit" href="javascript:void(0);"></a>
+                        <a class="delete" href="javascript:void(0);"></a>
                     </td>
                 </tr>
             </tbody>
@@ -83,13 +83,14 @@
             <p><strong>Errors</strong>
             </p>
             <ol>
-                <li>test</li>
-                <li>test</li>
+                <li>temp</li>
+                <!--<li>test</li>
+                <li>test</li>-->
             </ol>
         </div>
 
         <!-- add student form -->
-        <form action="" name="addStudent" id="addStudent">
+        <form action="" id="addStudent">
             <table>
                 <tr>
                     <td>
@@ -101,16 +102,15 @@
                     </td>
                     <td>
                         <a href="javascript:void(0);" class="tooltip">
-                            <p>?</p>
-                            <span>
-                                Name should have:
-                                <ul>
-                                    <li>two words separated by space</li>
-                                    <li>only letters</li>
-                                    <li>first letter of each word must be in uppercase</li>
-                                    <li>not more than 20 characters</li>
-                                </ul>
-                            </span>
+                            <label>
+                                Name should have:<br/><br/>
+                                <span>
+                                    * two words separated by space<br/>
+                                    * only letters<br/>
+                                    * first letter of each word must be in uppercase<br/>
+                                    * not more than 20 characters
+                                </span>
+                           </label>
                         </a>
                     </td>
                 </tr>
@@ -124,13 +124,13 @@
                     </td>
                     <td>
                         <a href="javascript:void(0);" class="tooltip">
-                            <p>?</p>
-                            <span>
-                                Email should be in the following format:
-                                <ul>
-                                    <li>xy@zabc.com</li>
-                                </ul>
-                            </span>
+                            
+                            <label>
+                                Email should be in the following format:<br /><br/>
+                                <span>
+                                    * xy@zabc.com
+                                </span>
+                            </label>
                         </a>
                     </td>
                 </tr>
@@ -147,17 +147,17 @@
                     </td>
                     <td>
                         <a href="javascript:void(0);" class="tooltip">
-                            <p>?</p>
-                            <span>
+                            
+                            <label>
                                 Choose any one option given in the list.
-                            </span>
+                            </label>
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="3" id="buttons">
                         <button id="submit" class="b-green" type="submit">Submit</button>
-                        <button id="reset" class="b-red">Reset</button>
+                        <button id="reset" class="b-red" type="reset">Reset</button>
                     </td>
                 </tr>
             </table>
@@ -166,7 +166,6 @@
     <!-- popup ends -->
 
     <!-- scripts -->
-    <script type="text/javascript" src="js/date.format.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
